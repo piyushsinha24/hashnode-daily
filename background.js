@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let articles = [];
   //Fetching the featured articles for the day
   fetch(
-    "https://api.hashnode.com/?query={storiesFeed(type:%20FEATURED){title,author{username},coverImage,slug,dateFeatured}}"
+    "https://api.hashnode.com/?query={storiesFeed(type:%20FEATURED){title,author{username,blogHandle,publicationDomain},coverImage,slug,dateFeatured}}"
   )
     .then(function (response) {
       return response.json();
@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let author = document.createElement("h3");
     author.appendChild(document.createTextNode(articles[i].author.username));
     let anchor = document.createElement("a");
-    anchor.href = `https://${articles[i].author.username}.hashnode.dev/${articles[i].slug}`;
+    let publicationDomain = articles[i].author.publicationDomain;
+    publicationDomain == ""?
+    anchor.href = `https://${articles[i].author.blogHandle}.hashnode.dev/${articles[i].slug}`:
+    anchor.href = `https://${publicationDomain}/${articles[i].slug}`;
     anchor.target = "_blank";
     anchor.appendChild(title);
     listItem.appendChild(imgCover);
