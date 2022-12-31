@@ -11,7 +11,8 @@ html {
 }
 
 body {
-    background-color: #f1f1f1;
+    background-color: #f2f3ff;
+    scrollbar-width: thin;
 }
 
 nav {
@@ -22,12 +23,13 @@ nav {
     align-items: center;
     width: 100%;
     background-color: #ffffff;
+    border-radius: 5px;
 }
 
 nav img {
     width: 42px;
     margin-left: 12px;
-    background-color: #f1f1f1;
+    background-color: #f2f3ff;
 }
 
 #preloader {
@@ -52,30 +54,32 @@ nav img {
 }
 
 @-webkit-keyframes spin {
-    0%{
+    0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-    100%{
-       -webkit-transform: rotate(360deg);
-       transform: rotate(360deg);
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
- @keyframes spin {
-     0%{
-         -webkit-transform: rotate(0deg);
-         transform: rotate(0deg);
-     }
-     100%{
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
-     }
- }
+    }
+}
 
- ul {
-    margin-top: 50px;
- }
+ul {
+    margin: 50px 0;
+}
 
 li {
     margin: 8px;
@@ -100,8 +104,19 @@ li h3 {
     font-size: 12px;
 }
 
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    cursor: pointer;
+}
+
 footer {
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 4px 2px;
     background-color: #ffffff;
 }
 
@@ -109,8 +124,4 @@ footer h3 {
     padding: 4px 2px;
     text-align: center;
     font-weight: 400;
-}
-
-footer h3 a {
-    color: #2962ff;
 }
