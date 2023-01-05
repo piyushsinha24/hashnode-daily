@@ -1,7 +1,6 @@
-
 {
   "name": "Hashnode Daily",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Get featured articles for the day. Powered by Hashnode API.",
   "background": [
     {
@@ -11,11 +10,11 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
-        "16": "icons/logo-16.png",
-        "32": "icons/logo-32.png",
-        "48": "icons/logo-48.png",
-        "128": "icons/logo-128.png"
-      }
+      "16": "icons/logo-16.png",
+      "32": "icons/logo-32.png",
+      "48": "icons/logo-48.png",
+      "128": "icons/logo-128.png"
+    }
   },
   "icons": {
     "16": "icons/logo-16.png",
