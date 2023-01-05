@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(function (data) {
       articles = data.data.storiesFeed;
-      document.getElementById("preloader").style.display = "none";
-      createList(articles);
+      setTimeout(() => {
+        createList(articles);
+        document.getElementById("loader").style.display = "none";
+      }, 2000);
     })
     .catch(function (e) {
       console.log(e);
     });
-  //
 
   //creating list
   function createList(articles) {

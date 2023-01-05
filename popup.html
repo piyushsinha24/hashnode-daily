@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <nav>
-      <img src="icons/custom-logo.svg" alt="logo">
+      <img src="icons/custom-logo.svg" alt="logo" />
     </nav>
-    <div id="preloader">
-      <div id="loader"></div>
+    <div id="loader">
+      <div class="cover-img animate"></div>
+      <div class="title animate"></div>
+      <div class="author animate"></div>
+      <br />
+      <div class="cover-img animate"></div>
+      <div class="title animate"></div>
+      <div class="author animate"></div>
     </div>
     <ul id="list"></ul>
     <footer>
-      <h3>Powered by <a href="https://api.hashnode.com/" target="_blank">Hashnode API</a></h3>
+      <h3>
+        Powered by
+        <a href="https://api.hashnode.com/" target="_blank">Hashnode API</a>
+      </h3>
     </footer>
     <script src="background.js"></script>
   </body>
